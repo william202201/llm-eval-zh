@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-eval-zh"
+version = "1.0.0"
+description = "Blind side-by-side evaluation of Chinese LLM answers: question set, rubric, scoring workbook and report"
+requires-python = ">=3.11"
+dependencies = ["openpyxl>=3.1"]
+license = "MIT"
+
+[project.scripts]
+llm-eval = "llm_eval.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["llm_eval*"]
